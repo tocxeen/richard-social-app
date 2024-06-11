@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+
+$richard-social-app-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  density: (
+    scale: 0,
+  )
+));
+
+:root {
+  @include mat.all-component-themes($richard-social-app-theme);
+}
+
+
+$primary: #153156;
+$secondary: #0646FF;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #F1592A;
+$danger: #f11653;
+$enable-shadows: true;
+$prefix: "mo-";
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+.card{
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.link{
+    color: $warning;
+    text-decoration: underline;
+}
+
+.chat-fluid{
+  padding: 150px;
+  background-color: aliceblue;
+  background: radial-gradient(circle, rgba(180,201,217,1) 0%, rgba(255,255,255,1) 100%);
+
+  .card{
+      /* block-size: 335px; */
+      border-radius: 16px;
+      background-color: hsla(0, 0%, 100%, .3);
+      -webkit-backdrop-filter: blur(15px) saturate(86%);
+      backdrop-filter: blur(15px) saturate(86%);
+      padding: 20px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: relative;
+  }
+
+  .text-success-emphasis {
+      color: #75b798 !important;
+  }
+  .fw-semibold {
+      font-weight: 600 !important;
+  }
+
+  .bg-success-subtle {
+      background-color: #D1E7DE !important;
+      border: 1px solid #A5D0BC;
+  }
+}
+.auth-bg{
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 28%, rgba(180,201,217,1) 74%);
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
