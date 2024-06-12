@@ -42,10 +42,14 @@ $prefix: "mo-";
 }
 
 .chat-fluid{
-  padding: 150px;
+  padding: 120px;
   background-color: aliceblue;
   background: radial-gradient(circle, rgba(180,201,217,1) 0%, rgba(255,255,255,1) 100%);
 
+  @media (max-width: 600px) {
+    padding: 90px 20px;
+    text-align: center;
+  }
   .card{
       /* block-size: 335px; */
       border-radius: 16px;
@@ -72,12 +76,17 @@ $prefix: "mo-";
 }
 .auth-bg{
   background: rgb(255,255,255);
-  background: radial-gradient(circle, rgba(255,255,255,1) 28%, rgba(180,201,217,1) 74%);
+  background: radial-gradient(circle, rgb(255, 255, 255) 28%, rgba(180,201,217,1) 74%);
   height: 100vh;
   justify-content: center;
   align-items: center;
 }
 
+.text-gradient {
+  background: -webkit-linear-gradient(315deg, #0b19b8 0%, #e2871e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
 html, body { height: 100%; }

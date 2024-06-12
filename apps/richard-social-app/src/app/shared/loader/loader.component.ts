@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-friends',
+  selector: 'app-loader',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './friends.component.html',
-  styleUrl: './friends.component.css',
+  templateUrl: './loader.component.html',
+  styleUrl: './loader.component.css',
 })
-export class FriendsComponent {}
+export class LoaderComponent {}

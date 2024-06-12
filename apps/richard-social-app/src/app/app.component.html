@@ -1,1 +1,9 @@
-<app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet>
+@if(showLoading | async){
+    <app-loader/>
+}
+@if (isAuthenticated |async) {
+    <app-frame/>
+}
+@else {
+   <router-outlet/>
+}

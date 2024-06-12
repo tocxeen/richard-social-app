@@ -1,1 +1,25 @@
-<p>home works!</p>
+<div class="container-fluid chat-fluid">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-8 col-sm-12">
+        <div class="jumbotron">
+          <h1 class="display-4">Hello, {{authService.getUserName()}}!</h1>
+          <p class="lead">
+            Don't miss out on any post! Share your thoughts and engage with us on
+            all our platforms. <span class="text-warning">#StayConnected</span>
+          </p>
+
+          <a (click)="openPostFormDialog()" class="btn btn-primary mt-1">Add Post</a>
+          <hr class="my-4" />
+          <p>
+            My Post(s) 
+          </p>
+          <div class="row d-flex justify-between">
+            <div class="col-md-12 scroll-section p-4">
+            <app-post-list [type]="'personal'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

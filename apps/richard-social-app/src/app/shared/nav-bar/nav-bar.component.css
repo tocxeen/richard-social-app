@@ -1,0 +1,42 @@
+.tc-toolbar{
+    background-color: rgb(37, 38, 40, .21);
+    background-image: radial-gradient(circle at 25%, hsla(0, 0%, 100%, .2), rgba(50, 50, 50, .2) 80%);
+    backdrop-filter: blur(14px);
+    width: 60%;
+    border-radius: 7px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    .nav-link{
+        color: #7f89ad;
+    }
+
+    .cr-btn-round{
+        border-radius: 50px;
+        background-color: #F1592A;
+        border: none;
+        color: #ffffff;
+    }
+
+    .btn:active,.btn:checked{
+        outline: none;
+    }
+
+    .text-sm{
+        
+
+        
+    }
+    .dropdown-menu {
+        margin-top: 20px; 
+        
+    }
+}
+
+.active{
+    color: #153156 !important;
+}
+

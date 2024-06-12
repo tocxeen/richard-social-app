@@ -1,0 +1,11 @@
+.text-gradient {
+    background: -webkit-linear-gradient(315deg, #0b19b8 0%, #e2871e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .posts{
+    height: 500px;
+    overflow-y: scroll;
+    border-radius: 5px;
+  }

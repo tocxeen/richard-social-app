@@ -1,0 +1,12 @@
+.text-justify {
+  text-align: justify;
+}
+
+.right{
+    float: right;
+}
+
+.card{
+    background-image: radial-gradient(circle at 25%, hsla(0, 0%, 100%, .2), rgba(50, 50, 50, .2) 80%);
+    backdrop-filter: blur(14px);
+}
