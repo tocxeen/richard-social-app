@@ -6,13 +6,9 @@
 
 ## Integrate with editors
 
-Enhance your Nx experience by installing [Nx Console](https://nx.dev/nx-console) for your favorite editor. Nx Console
-provides an interactive UI to view your projects, run tasks, generate code, and more! Available for VSCode, IntelliJ and
-comes with a LSP for Vim users.
-
 ## Start the application
 
-Run `npx nx serve richard-social-app` to start the development server. Happy coding!
+Run `npx nx serve richard-social-app` to start the development server.
 
 ## Build for production
 
@@ -42,21 +38,4 @@ Targets can be defined in the `package.json` or `projects.json`. Learn more [in 
 
 ## Set up CI!
 
-Nx comes with local caching already built-in (check your `nx.json`). On CI you might want to go a step further.
 
-- [Set up remote caching](https://nx.dev/features/share-your-cache)
-- [Set up task distribution across multiple machines](https://nx.dev/nx-cloud/features/distribute-task-execution)
-- [Learn more how to setup CI](https://nx.dev/recipes/ci)
-
-## Explore the project graph
-
-Run `npx nx graph` to show the graph of the workspace.
-It will show tasks that you can run with Nx.
-
-- [Learn more about Exploring the Project Graph](https://nx.dev/core-features/explore-graph)
-
-## Connect with us!
-
-- [Join the community](https://nx.dev/community)
-- [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
-- [Follow us on Twitter](https://twitter.com/nxdevtools)
