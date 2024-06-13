@@ -1,4 +1,3 @@
-import { Store } from '@ngrx/store';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -6,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppState } from '../../../tools/store/app.state';
 import { setLoadingSpinner } from '../../../tools/states/shared/shared.actions';
 import { loginStart } from '../../../tools/states/auth/auth.actions';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-login',

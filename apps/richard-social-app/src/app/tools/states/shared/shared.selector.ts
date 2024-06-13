@@ -11,4 +11,8 @@ export const getLoading = createSelector(getSharedState, (state:any)=>{
 
 export const getErrorMessage = createSelector(getSharedState,(state)=>{
     return state.errorMessage;
+});
+
+export const getSuccessMessage = createSelector(getSharedState,(state)=>{
+    return state.successMessage;
 })

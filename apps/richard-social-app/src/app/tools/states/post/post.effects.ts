@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { AppState } from '../../store/app.state';
 import { Router } from '@angular/router';
 import { AlertService, PostService } from '../../services';
-import { setErrorMessage, setLoadingSpinner } from '../shared/shared.actions';
+import { setErrorMessage, setLoadingSpinner, setSuccessMessage } from '../shared/shared.actions';
 import { deletePost, deletePostSuccess, downvotePost, loadPost, loadPostSuccess, postStart, postSuccess, upvotePost } from './post.action';
 
 
@@ -28,6 +28,7 @@ export class RegisterEffects {
            post(action.title,action.content,action.published).
            pipe(map((data) => {
             this.store.dispatch(setErrorMessage({message:''}));
+            this.store.dispatch(setSuccessMessage({message:'Post added successfully'}));
             this.store.dispatch(setLoadingSpinner({status:false}));
             const post = this.postService.formatLoginData(data);
             this.alertService.success('Post submitted successfully');
@@ -35,7 +36,8 @@ export class RegisterEffects {
            }),
         catchError((errorResp:any)=>{
             this.store.dispatch(setLoadingSpinner({status:false}));
-            const errorMessage = this.postService.formatErrorMessage(errorResp.error.detail);   
+            const errorMessage = this.postService.formatErrorMessage(errorResp.error.detail);  
+            this.store.dispatch(setSuccessMessage({message:''})); 
             return of(setErrorMessage({message:errorMessage}));
         }));
         }));
